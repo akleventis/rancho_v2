@@ -1,32 +1,29 @@
-import '../styles/globals.css';
+import "../styles/globals.scss";
 
-const title = 'Rancho Maria Mens Club'
+const title = "Rancho Maria Mens Club";
 
 const pages = {
-  'Spreadsheet': '/spreadsheet',
-  'Calendar': '/',
-  'Presidents Note': '/note',
-};
-
-
-const Header = () => {
-  return (
-    <h3>
-      <a href='/'>{title}</a>
-    </h3>
-  );
+  Home: "/",
+  Spreadsheet: "/spreadsheet",
 };
 
 const Nav = () => {
   return (
     <header>
-      <Header />
       <nav>
-        {Object.entries(pages).map(([key, route]) => (
-          <a className='route' key={key} href={route}>
-            {key}
+        <h3>
+          <a href="/">
+            {title}
+            <img src="rm_logo.png" />
           </a>
-        ))}
+        </h3>
+        <div>
+          {Object.entries(pages).map(([key, route]) => (
+            <a key={key} href={route}>
+              {key}
+            </a>
+          ))}
+        </div>
       </nav>
     </header>
   );
@@ -36,9 +33,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Nav />
-      <div className='container'>
-          <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
     </>
   );
 }
