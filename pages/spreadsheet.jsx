@@ -1,3 +1,5 @@
+const buttonText = 'Click to view file'
+
 const Spreadsheet = () => {
   return (
     <div className='spreadsheet'>
@@ -7,7 +9,7 @@ const Spreadsheet = () => {
           href='https://docs.google.com/spreadsheets/d/1sgu637RDSw7o_AE4EoP4TrOKlkUZLvSMv3YNL-9A1I8/edit?usp=sharing'
           className='button'
         >
-          Click to view file
+          {buttonText}
         </a>
       </div>
       <div className='iframe-container'>
