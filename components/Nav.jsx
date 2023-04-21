@@ -1,4 +1,5 @@
 const title = "Rancho Maria Mens Club";
+const logo = 'rm_logo.png'
 
 const pages = {
   Home: "/",
@@ -12,14 +13,12 @@ const Nav = () => {
         <h3>
           <a href="/">
             {title}
-            <img src="rm_logo.png" />
+            <img src={logo} />
           </a>
         </h3>
         <div>
           {Object.entries(pages).map(([key, route]) => (
-            <a key={key} href={route}>
-              {key}
-            </a>
+            <a key={key} href={route}>{key}</a>
           ))}
         </div>
       </nav>
