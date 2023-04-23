@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import '../styles/globals.scss';
 import HeadMeta from '../components/HeadMeta.jsx'
 import Nav from '../components/Nav.jsx'
 
